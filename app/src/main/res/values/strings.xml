@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Pomodoro Timer</string>
+    <string name="start">Start</string>
+    <string name="resume">Resume</string>
+    <string name="pause">Pause</string>
+    <string name="stop">End Session</string>
+    <string name="work_message">Time to work!</string>
+    <string name="hello_blank_fragment">Settings</string>
+    <string name="work_time_input">Work Time</string>
+    <string name="short_break_input">Short Break Time</string>
+    <string name="large_break_input">Large Break Time</string>
+    <string name="totalWorkTimeMessage">Total Work Time: </string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

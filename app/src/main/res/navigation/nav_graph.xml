@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/timerFragment">
+
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="com.example.pomodorotimer.TimerFragment"
+        android:label="TimerFragment"
+        tools:layout="@layout/fragment_timer">
+        <action
+            android:id="@+id/show_detailsFragment2"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/show_settingsFragment2"
+            app:destination="@id/settingsFragment2" />
+        <!--<argument
+            android:name="workTimeId"
+            app:argType="integer" />
+
+         <argument
+            android:name="shortBreakId"
+            app:argType="integer" />
+        <argument
+            android:name="longBreakId"
+            app:argType="integer" /> -->
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.pomodorotimer.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/details_to_timer"
+            app:destination="@id/timerFragment" />
+        <argument
+            android:name="totalWorkTime"
+            app:argType="integer" />
+        <argument
+            android:name="totalCycleCount"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment2"
+        android:name="com.example.pomodorotimer.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/to_timerFragment"
+            app:destination="@id/timerFragment" />
+
+    </fragment>
+</navigation>
