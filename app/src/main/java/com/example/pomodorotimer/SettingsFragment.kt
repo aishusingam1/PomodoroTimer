@@ -40,14 +40,8 @@ class SettingsFragment : Fragment() {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         binding.apply{
             backButton.setOnClickListener(){
-                //findNavController().previousBackStackEntry?.savedStateHandle?.set("testKey", workTimeEntered)
-                //findNavController().navigate(R.id.to_timerFragment)
-
-                //findNavController().navigate(SettingsFragmentDirections.toTimerFragment(workTimeEntered))
+            
                 findNavController().navigate(SettingsFragmentDirections.toTimerFragment())
-                //findNavController().navigate(SettingsFragmentDirections.toTimerFragment(shortBreakEntered))
-                //findNavController().navigate(SettingsFragmentDirections.toTimerFragment(longBreakEntered))
-
             }
             workTimeInput.doOnTextChanged { text, _, _, _ ->
                 workTimeEntered = Integer.parseInt(text.toString())
