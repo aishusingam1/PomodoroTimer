@@ -15,10 +15,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.pomodorotimer.databinding.FragmentDetailsBinding
 
-/**
- * An example full-screen fragment that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
- */
 class DetailsFragment : Fragment() {
 
     private var _binding: FragmentDetailsBinding? = null
@@ -27,8 +23,7 @@ class DetailsFragment : Fragment() {
     lateinit var totalCycleCount : TextView
 
     private val args: DetailsFragmentArgs by navArgs()
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+  
     private val binding get() = _binding!!
 
     override fun onCreateView(
