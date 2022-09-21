@@ -14,7 +14,6 @@ import com.example.pomodorotimer.databinding.FragmentTimerBinding
 
 class TimerFragment : Fragment(){
 
-    //private lateinit var binding: FragmentTimerBinding
     private var _binding: FragmentTimerBinding? = null
     private val binding
         get() = checkNotNull(_binding){
@@ -123,12 +122,6 @@ class TimerFragment : Fragment(){
         textView = binding.textView
         messageView = binding.messageView
 
-        //val navController = findNavController();
-        //navController.currentBackStackEntry?.savedStateHandle?.getLiveData<Int>("testKey")?.observe(
-        //    viewLifecycleOwner) { result ->
-        //    millisInFutureWork = (result).toLong()*60*1000
-        //}
-
         setFragmentResultListener(
             SettingsFragment.REQUEST_WORK_TIME
         ) { _, bundle ->
@@ -234,7 +227,6 @@ class TimerFragment : Fragment(){
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        //findNavController().navigate(R.id.show_settingsFragment2)
 
         Log.d("TAG", "entered stop, going to settings")
         findNavController().navigate(TimerFragmentDirections.showSettingsFragment2())
