@@ -17,15 +17,15 @@ class TimerFragment : Fragment(){
     private var _binding: FragmentTimerBinding? = null
     private val binding
         get() = checkNotNull(_binding){
-            "Cannot access binding because it is null. Is the view visible?"
+            "Error statement"
         }
 
     lateinit var textView : TextView
     lateinit var messageView : TextView
 
-    var workTimeMin = 2
-    var shortBreakMin = 1
-    var longBreakMin = 2
+    var workTimeMin = 20
+    var shortBreakMin = 5
+    var longBreakMin = 15
 
     private var isPaused = false
     private var isCancelled = false
@@ -103,7 +103,7 @@ class TimerFragment : Fragment(){
                     if((millisInFutureWork /1000)%60 < 10){
                         textView.setText("" + (millisInFutureBreakLong/1000)/60 + ":0" + (millisInFutureBreakLong /1000)%60)
                     } else {
-                        textView.setText("" + (millisInFutureBreakLong / 1000) / 60 + ":" + (millisInFutureBreakLong / 1000) % 60)
+                        textView.setText("" + (millisInFutureBreakLong / 100) / 60 + ":" + (millisInFutureBreakLong / 1000) % 60)
                     }
 
                     timer(millisInFutureBreakLong, countDownInterval)
