@@ -18,9 +18,9 @@ private const val TAG = "SettingsFragment"
 
 class SettingsFragment : Fragment() {
 
-    private var workTimeEntered = 15
-    private var shortBreakEntered = 5
-    private var longBreakEntered = 25
+    private var workTimeEntered = 5
+    private var shortBreakEntered = 2456
+    private var longBreakEntered = 10000
 
     private var _binding: FragmentSettingsBinding? = null
     private val binding
